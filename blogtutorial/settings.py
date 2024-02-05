@@ -87,12 +87,12 @@ DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 DATABASES = {
    'default': {
-      username = doadmin
-password = AVNS_4iU4TATa1SXA_HwG0jX
-host = app-06bfcde1-e2ae-49ea-b43f-ecc77d2b154e-do-user-11508951-0.c.db.ondigitalocean.com
-port = 25060
-database = defaultdb
-sslmode = require
+      'username': 'doadmin',
+      'password': 'AVNS_4iU4TATa1SXA_HwG0jX',
+      'host': 'app-06bfcde1-e2ae-49ea-b43f-ecc77d2b154e-do-user-11508951-0.c.db.ondigitalocean.com',
+      'port': 25060,
+      'database': 'defaultdb',
+      'sslmode': 'require',
    }
 }
 

@@ -85,19 +85,16 @@ WSGI_APPLICATION = 'blogtutorial.wsgi.application'
 
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
-if DEVELOPMENT_MODE is True:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-        }
-    }
-elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
-    if os.getenv("DATABASE_URL", None) is None:
-        raise Exception("DATABASE_URL environment variable not defined")
-    DATABASES = {
-        "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
-    }
+DATABASES = {
+   'default': {
+      username = doadmin
+password = AVNS_4iU4TATa1SXA_HwG0jX
+host = app-06bfcde1-e2ae-49ea-b43f-ecc77d2b154e-do-user-11508951-0.c.db.ondigitalocean.com
+port = 25060
+database = defaultdb
+sslmode = require
+   }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
